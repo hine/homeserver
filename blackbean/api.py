@@ -11,31 +11,26 @@ import threading
 from os import path
 
 import broadlink
-import configparser
 from tornado_json.requesthandlers import APIHandler
 from tornado_json import schema
 
-
-APP_DIR = path.dirname(path.abspath(__file__))
-BLACKBEAN_COMMANDS_FILE = path.join(APP_DIR, 'commands.ini')
+import commands
 
 
 class BlackBeanManager(object):
-    """Management Blackbean Connection
+    """Management Blackbean Class
     """
 
     def __init__(self):
         self._is_connected = False
-        settings = configparser.ConfigParser()
-        settings.read(BLACKBEAN_COMMANDS_FILE)
-        self._rf_commands = settings['Commands']
+        self._rf_commands = commands.rf_commands
         self._start_connector()
 
     def is_connected(self):
         return self._is_connected
 
     def check_command(self, rf_command):
-        return rf_command in self._rf_commands
+        return self._rf_commands.has_key(rf_command)
 
     def send_command(self, rf_command):
         command = self._get_command(rf_command)
@@ -51,7 +46,7 @@ class BlackBeanManager(object):
                 return True
 
     def _get_command(self, rf_command):
-        if rf_command in self._rf_commands:
+        if self._rf_commands.has_key(rf_command):
             return self._rf_commands[rf_command]
         else:
             return False
@@ -88,7 +83,7 @@ class BlackBeanHandler(APIHandler):
         return_data['received'] = {}
         return_data['received']['device'] = device
         return_data['received']['command'] = command
-        rf_command = device + '_' + command
+        rf_command = device + '/' + command
         return_data['rf_command'] = rf_command
         if blackbean.is_connected():
             if blackbean.check_command(rf_command):
