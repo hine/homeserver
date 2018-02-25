@@ -96,3 +96,22 @@ blackbeanプログラムからのレスポンスは以下通りです。
 | error_message | resultがerrorの場合のエラー内容 |
 
 ## サーバの自動起動
+systemdを用いて、RaspberryPi起動時にサーバを自動的に起動する設定を行います。自動起動の設定ファイルは、このプログラムを/home/pi/homeserver/にインストールした前提で記述しています。別の場所にインストールした場合は、scripts/homeserver.serviceの該当場所を書き換えてください。
+
+まずはサービスを登録します。
+```
+sudo cp scripts/homeserver.service /etc/systemd/system/
+```
+サービスを起動してみます。
+```
+sudo service homeserver start
+```
+サービスを終了してみます。
+```
+sudo service homeserver stop
+```
+無事に起動終了が確認できたら、自動起動の設定を行います。
+```
+sudo systemctl enable homeserver
+```
+設定が終われば、RaspberryPiを再起動して、サーバーが自動起動するか確認してください。
