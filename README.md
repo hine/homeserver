@@ -85,6 +85,7 @@ http://[RaspberryPiのIPアドレス]:8888/api/[device名]/[command名]
 ----|----
 | status | 正しいAPIのURLにアクセスできていればsuccess |
 | data | blackbeanプログラムからのレスポンス |
+
 blackbeanプログラムからのレスポンスは以下通りです。
 
 | キー | 内容 |
