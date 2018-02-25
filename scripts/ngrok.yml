@@ -1,0 +1,7 @@
+authtoken: *****************************
+region: ap
+tunnels:
+  homeserver:
+    addr: 8888
+    proto: http
+    subdomain: ********

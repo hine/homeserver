@@ -1,0 +1,12 @@
+[Unit]
+Description=HomeServer
+After=syslog.target  network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/HomeServer
+ExecStart=/usr/bin/python homeserver.py
+StandardOutput=null
+
+[Install]
+WantedBy = multi-user.target
