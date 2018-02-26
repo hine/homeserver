@@ -68,7 +68,7 @@ python homeserver.py
 ### APIの呼び出し
 APIは以下のようなURLとなります。
 ```
-http://[RaspberryPiのIPアドレス]:8888/api/[device名]/[command名]
+http://[RaspberryPiのIPアドレス]:8888/api/blackbean/[device名]/[command名]
 ```
 レスポンスはJSONで帰ってきます。以下はレスポンスの例です。
 ```

@@ -97,5 +97,5 @@ class BlackBeanHandler(APIHandler):
                 return_data['error_message'] = 'rf_command is not defined'
         else:
             return_data['result'] = 'error'
-            return_data['error_message'] = 'blackbeans is not connected'
+            return_data['error_message'] = 'blackbean is not connected'
         return return_data
