@@ -118,6 +118,8 @@ sudo systemctl enable homeserver
 
 ngrokで固定的なURLを発行するために月額$5のBasicの契約をしています。その場合に、同じようにRaspberryPiでserviceとして自動起動できるようにしています。そのための設定ファイルをscriptsの下にサンプルとして置いてあります。ご興味があればご活用ください。
 
+なお、セキュリティ対策などは特に施していませんので、APIのURLがバレると外部から容易に操作可能となります。外部に公開する場合は注意してください。
+
 ### スマートスピーカーとの連携はIFTTTで
 
 Google HomeやAmazon Echoなどと連携させるには、[https://ifttt.com](IFTTT)を利用します。
