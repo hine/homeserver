@@ -32,7 +32,7 @@ $ cd homeserver/
 ### リモコンの学習
 操作を記憶させたいリモコンを用意してください。そしてリモコン学習用のスクリプトを実行します。
 ```
-$ python script/blackbean_learn.py
+$ python scripts/blackbean_learn.py
 ```
 そうすると、以下のようなメッセージが順次表示されます。
 ```
