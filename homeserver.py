@@ -12,6 +12,9 @@ from tornado_json.routes import get_routes
 from tornado_json.application import Application
 
 
+# If you want to change the port number, change here
+SERVER_PORT = 8888;
+
 def make_app():
     import blackbean
     routes = get_routes(blackbean)
@@ -24,5 +27,5 @@ def make_app():
 
 if __name__ == "__main__":
     app = make_app()
-    app.listen(8888)
+    app.listen(SERVER_PORT)
     IOLoop.instance().start()

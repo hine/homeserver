@@ -1,12 +1,12 @@
 # homeserver
 
 ## これは何？
-RaspberryPiをサーバとして、BlackBeanことeRemote mini/RM mini3をコントロールし、赤外線リモコンデバイスをコントロールできるようにします。
+RaspberryPiをサーバとして、BlackBeanことeRemote mini/RM mini3をコントロールし、赤外線リモコンでコントロールできるデバイスを操作できるようにします。
 
 ## 事前準備
-BlackBeanは手順通り家庭内のWiFiに接続させておいてください。RaspberryPiも同じネットワークに配置する必要があります。
+BlackBeanは手順通り家庭内のWiFiに接続させておいてください。RaspberryPiも同じネットワークに配置する必要があります。以下に登場するbroadlinkのライブラリを用いてWiFiネットワークに接続する設定も可能ですが、ここでは割愛します。ライブラリのgithubを参照してください。
 
-また、Pythonで利用するライブラリをインストールするために、RaspberryPi上で以下の作業を行ってください。(python2環境を想定しています)
+まずはPythonで利用するライブラリをインストールするために、RaspberryPi上で以下の作業を行ってください。(python2環境を想定しています)
 
 ### broadlinkライブラリのインストール
 ```
@@ -64,11 +64,12 @@ Success.
 ```
 python homeserver.py
 ```
+標準ではポート番号に8888を利用していますが、他のサーバアプリケーションと競合するなどの理由で変更したい場合はhomeserver.pyの該当箇所を書き換えてください。
 
 ### APIの呼び出し
 APIは以下のようなURLとなります。
 ```
-http://[RaspberryPiのIPアドレス]:8888/api/blackbean/[device名]/[command名]
+http://[RaspberryPiのIPアドレス]:8888(ポート番号)/api/blackbean/[device名]/[command名]
 ```
 レスポンスはJSONで帰ってきます。以下はレスポンスの例です。
 ```
