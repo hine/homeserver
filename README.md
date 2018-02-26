@@ -8,13 +8,6 @@ BlackBeanは手順通り家庭内のWiFiに接続させておいてください�
 
 また、Pythonで利用するライブラリをインストールするために、RaspberryPi上で以下の作業を行ってください。(python2環境を想定しています)
 
-### python-devとpipのインストール
-```
-$ sudo apt-get update
-$ sudo apt-get install python-dev
-$ sudo apt-get install python-pip
-```
-
 ### broadlinkライブラリのインストール
 ```
 $ sudo pip install broadlink
