@@ -114,7 +114,7 @@ sudo systemctl enable homeserver
 
 ### 外部からRaspberryPiにアクセスできるようにする
 
-我が家では、家に置いたRaspberryPiに[https://ngrok.com/](ngrok)で作ったトンネル経由で接続できるようにしています。ルータのDMZやポート開放などを使ってアクセスできるようにしてもいいかもしれません。
+我が家では、家に置いたRaspberryPiに[ngrok](https://ngrok.com/)で作ったトンネル経由で接続できるようにしています。ルータのDMZやポート開放などを使ってアクセスできるようにしてもいいかもしれません。
 
 ngrokで固定的なURLを発行するために月額$5のBasicの契約をしています。その場合に、同じようにRaspberryPiでserviceとして自動起動できるようにしています。そのための設定ファイルをscriptsの下にサンプルとして置いてあります。ご興味があればご活用ください。
 
@@ -122,7 +122,7 @@ ngrokで固定的なURLを発行するために月額$5のBasicの契約をし�
 
 ### スマートスピーカーとの連携はIFTTTで
 
-Google HomeやAmazon Echoなどと連携させるには、[https://ifttt.com](IFTTT)を利用します。
+Google HomeやAmazon Echoなどと連携させるには、[IFTTT](https://ifttt.com/)を利用します。
 ITに例えば「Google Assistant」の「Say a simple phrase」を指定し、ngrokで作られたトンネルのURLでAPIにアクセスさせます。
 
 このあたりの手順の詳細な情報についてはこのREADMEの範囲を超えますので、ネットで検索してください。
