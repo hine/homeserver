@@ -123,6 +123,6 @@ ngrokで固定的なURLを発行するために月額$5のBasicの契約をし�
 ### スマートスピーカーとの連携はIFTTTで
 
 Google HomeやAmazon Echoなどと連携させるには、[IFTTT](https://ifttt.com/)を利用します。
-ITに例えば「Google Assistant」の「Say a simple phrase」を指定し、ngrokで作られたトンネルのURLでAPIにアクセスさせます。
+IFに例えば「Google Assistant」の「Say a simple phrase」を指定し、ngrokで作られたトンネルのURLでAPIにアクセスさせます。
 
 このあたりの手順の詳細な情報についてはこのREADMEの範囲を超えますので、ネットで検索してください。
